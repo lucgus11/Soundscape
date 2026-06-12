@@ -48,7 +48,7 @@ export class AmbientNoiseAnalyzer {
 
     const tick = (): void => {
       if (!this.analyser || !this.dataArray) return;
-      this.analyser.getByteTimeDomainData(this.dataArray);
+     this.analyser.getByteTimeDomainData(this.dataArray as Uint8Array<ArrayBuffer>);
 
       // Calcul du RMS (root mean square) normalisé entre 0 et 1
       let sumSquares = 0;
