@@ -1,0 +1,142 @@
+:root {
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.mixer {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mixer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offline-badge {
+  background: #f59e0b;
+  color: #0f172a;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.tracks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.track-slider {
+  border: 1px solid #334155;
+  border-left-width: 4px;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.track-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.track-name {
+  font-weight: 600;
+}
+
+.download-btn {
+  background: #1e293b;
+  border: none;
+  color: #f1f5f9;
+  border-radius: 0.4rem;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.download-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.cached-badge {
+  font-size: 0.75rem;
+  color: #22c55e;
+}
+
+.track-warning {
+  font-size: 0.75rem;
+  color: #f87171;
+  margin: 0.25rem 0 0;
+}
+
+input[type='range'] {
+  width: 100%;
+}
+
+.master-volume {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ambient-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ambient-toggle button {
+  background: #1e293b;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+
+.ambient-toggle button.active {
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+.ambient-meter {
+  height: 8px;
+  background: #1e293b;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ambient-meter-fill {
+  height: 100%;
+  background: #22c55e;
+  transition: width 0.1s linear;
+}
+
+.ambient-error {
+  color: #f87171;
+  font-size: 0.85rem;
+}
+
+.mixer-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
